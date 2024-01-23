@@ -1,0 +1,4 @@
+apiVersion: v2
+name: external-secrets-components
+description: A Helm chart for Kubernetes to manage ExternalSecrets components
+version: 0.1.0

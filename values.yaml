@@ -1,0 +1,30 @@
+genericSecret:
+  enabled: false
+  name: generic-external-secret
+  secretStoreRef:
+    name: generic-secret-store
+    kind: ClusterSecretStore
+  refreshInterval: 30s
+  data: []
+#  data:
+#    - secretKey: username
+#      remoteRef:
+#        key: path/to/external/username
+#        property: username
+#    - secretKey: password
+#      remoteRef:
+#        key: path/to/external/password
+#        property: password
+
+dockerconfigjson:
+  enabled: false
+  name: dockerconfigjson-secret
+  secretStoreRef:
+    name: dockerconfigjson-secret-store
+    kind: ClusterSecretStore
+  refreshInterval: 30s
+  dockerconfigjsonKey: dockerconfigjson
+  data:
+    - secretKey: dockerconfigjson
+      remoteRef:
+        key: path/to/dockerconfigjson
